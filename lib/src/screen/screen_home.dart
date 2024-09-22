@@ -72,6 +72,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
               TextButton(
+                child: Text('To Deposit Flow'),
+                onPressed: () {
+                  context.go('/deposit');
+                },
+              ),
+              TextButton(
                 child: Text('To Setting Flow'),
                 onPressed: () {
                   context.go('/setting');
