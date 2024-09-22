@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/router.dart';
 import 'package:flutter_application_1/src/withdraw_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -22,8 +23,8 @@ class MyApp extends StatelessWidget {
     return ListenableBuilder(
       listenable: settingsController,
       builder: (BuildContext context, Widget? child) {
-        return MaterialApp(
-          home: WithdrawScreen(),
+        return MaterialApp.router(
+          routerConfig: AppRouter().router,
         );
       },
     );
