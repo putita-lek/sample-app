@@ -9,27 +9,21 @@ class PINScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightGreen,
       body: BlocBuilder<RegisterDeviceBloc, RegisterDeviceState>(
         builder: (context, state) {
           return Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Container(
-                color: Colors.green,
-                child: Column(
-                  children: [
-                    Text('CID: ${state.cid}'),
-                    TextButton(
-                      onPressed: () {
-                        print(
-                            'cid: ${context.read<RegisterDeviceBloc>().state.cid}');
-                        context.pop();
-                      },
-                      child: Text('pop'),
-                    )
-                  ],
-                ),
-              ),
+              Text('PIN screen'),
+              Text('CID: ${state.cid}'),
+              TextButton(
+                onPressed: () {
+                  print('cid: ${context.read<RegisterDeviceBloc>().state.cid}');
+                  context.pop();
+                },
+                child: Text('pop screen'),
+              )
             ],
           );
         },

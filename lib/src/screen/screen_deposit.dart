@@ -17,6 +17,7 @@ class _DepositScreenState extends State<DepositScreen> {
       builder: (context, state) {
         return Scaffold(
           body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Deposit Screen',

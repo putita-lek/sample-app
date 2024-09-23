@@ -9,6 +9,7 @@ class CIDScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.pink,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
